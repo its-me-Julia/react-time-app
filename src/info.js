@@ -1,5 +1,4 @@
 import React from "react";
-import SearchForm from "./form";
 
 export default function Info(props) {
   return (

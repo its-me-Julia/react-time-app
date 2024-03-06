@@ -8,10 +8,21 @@ import SearchForm from "./form";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div className="main-div">
-      <UpperList />
-      <br />
-      <SearchForm />
+    <div>
+      <div className="main-div">
+        <UpperList />
+        <br />
+        <SearchForm />
+      </div>
+      <footer>
+        <p className="footer-text">
+          - Coded by
+          <a className="footer-link" href="https://github.com/its-me-Julia">
+            &nbsp;JuliaD
+          </a>
+          -
+        </p>
+      </footer>
     </div>
   </React.StrictMode>
 );

@@ -57,3 +57,17 @@ code {
   margin: auto;
   padding: 3%;
 }
+
+.footer-text {
+  text-align: center;
+}
+
+.footer-link {
+  color: black;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
