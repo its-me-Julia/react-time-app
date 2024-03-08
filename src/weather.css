@@ -1,0 +1,11 @@
+.weather-frame {
+  border: solid 1px rgb(17, 17, 17);
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  padding: 16px;
+}
+
+li {
+  list-style: none;
+}

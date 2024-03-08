@@ -1,7 +1,10 @@
 .App {
-  text-align: center;
   margin: auto;
   margin-top: 30px;
+}
+
+.header {
+  text-align: center;
 }
 
 .footer-text {
@@ -9,7 +12,7 @@
 }
 
 .footer-link {
-  color: black;
+  color: rgb(52, 52, 52);
   font-weight: 800;
   text-decoration: none;
 }
