@@ -5,20 +5,26 @@ export default function Weather() {
   return (
     <div className="weather-frame">
       <form>
-        <input
-          type="search"
-          placeholder="Type a city.."
-          autoFocus
-          className="search-bar"
-        />
-        <input type="submit" value="Search" className="btn btn-primary" />
-        <input
-          type="button"
-          value="Current location"
-          className="btn btn-success"
-        />
+        <div className="row m-auto justify-content-between">
+          <input
+            type="search"
+            placeholder="Type a city.."
+            autoFocus
+            className="search-bar col-7"
+          />
+          <input
+            type="submit"
+            value="Search"
+            className="btn btn-primary col-2"
+          />
+          <input
+            type="submit"
+            value="Current Location"
+            className="btn btn-success col-3"
+          />
+        </div>
       </form>
-      <h1>New York</h1>
+      <h1>New York, USA</h1>
       <ul>
         <li>Wednesday, 07:00</li>
         <li>Mostly Cloudy</li>
@@ -29,7 +35,7 @@ export default function Weather() {
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="partly cloudy"
           />
-          6°C|°F
+          <span className="temperature">6°</span>C|°F
         </div>
         <div className="col-6">
           <ul>

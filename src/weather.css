@@ -1,11 +1,26 @@
 .weather-frame {
-  border: solid 1px rgb(17, 17, 17);
+  border: solid 1px rgb(88, 88, 88);
   border-radius: 8px;
-  max-width: 600px;
   margin: auto;
   padding: 16px;
 }
 
-li {
+.weather-frame form {
+  margin-bottom: 20px;
+}
+
+.weather-frame ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.weather-frame li {
   list-style: none;
+}
+
+.weather-frame .temperature {
+  font-size: 64px;
+  font-weight: 400;
+  color: rgb(79, 79, 79);
 }
