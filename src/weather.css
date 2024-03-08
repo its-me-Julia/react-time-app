@@ -12,15 +12,27 @@
 .weather-frame ul {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
 }
 
 .weather-frame li {
   list-style: none;
 }
 
+.weather-frame img {
+  height: 64px;
+  float: left;
+  margin-right: 20px;
+}
+
 .weather-frame .temperature {
   font-size: 64px;
   font-weight: 400;
   color: rgb(79, 79, 79);
+  line-height: 64px;
+  margin-right: 10px;
+}
+
+.weather-frame .units {
+  position: relative;
+  top: -32px;
 }
