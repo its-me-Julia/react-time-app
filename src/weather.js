@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./weather.css";
+import TimeStampFormat from "./TimeStamp";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function fetchResponse(response) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       imgAlt: response.data.condition.icon,
       imgUrl: response.data.condition.icon_url,
@@ -44,7 +46,9 @@ export default function Weather() {
         </form>
         <h1>New York, USA</h1>
         <ul>
-          <li>Wednesday, 07:00</li>
+          <li>
+            <TimeStampFormat timestamp={weatherData.date} />
+          </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
@@ -64,9 +68,8 @@ export default function Weather() {
       </div>
     );
   } else {
-    let city = "sydney";
     const apiKey = "b2dt6f634c03ca0b6c80o88e820fa880";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(fetchResponse);
 
     return "Loading...";
