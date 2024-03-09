@@ -1,5 +1,6 @@
 import React from "react";
 import TimeStampFormat from "./TimeStamp";
+import UnitConversion from "./unitConversion.js";
 
 export default function WeatherInfo(props) {
   return (
@@ -14,8 +15,7 @@ export default function WeatherInfo(props) {
       <div className="row mt-3">
         <div className="col-6 main-info">
           <img src={props.allData.imgUrl} alt={props.allData.imgAlt} />
-          <span className="temperature">{props.allData.temperature}</span>
-          <span className="units">C|F</span>
+          <UnitConversion celsius={props.allData.temperature} />
         </div>
         <div className="col-6">
           <ul>
