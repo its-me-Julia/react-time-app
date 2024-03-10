@@ -2,14 +2,15 @@ import React from "react";
 
 export default function ForecastDay(props) {
   function day() {
-    let date = new Date(props.forecastData.time);
+    let date = new Date(props.forecastData.time * 1000);
+    console.log(props.forecastData.time);
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     let day = date.getDay();
     return days[day];
   }
 
   return (
-    <div className="col d-flex flex-column">
+    <div className="d-flex flex-column">
       <div className="forecast-day">{day()}</div>
       <img
         src={props.forecastData.condition.icon_url}
