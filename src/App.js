@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="header">Weather App</h1>
-      <Weather defaultCity="Berlin" />
+      <Weather defaultCity="Ruzomberok" />
       <footer>
         <p className="footer-text">
           - Coded by{" "}

@@ -16,8 +16,7 @@ export default function Weather(props) {
       description: response.data.condition.description,
       imgAlt: response.data.condition.icon,
       imgUrl: response.data.condition.icon_url,
-      temperature: `${Math.round(response.data.temperature.current)}°`,
-      feelsLike: `${Math.round(response.data.temperature.feels_like)}°C`,
+      temperature: Math.round(response.data.temperature.current),
       humidity: `${Math.round(response.data.temperature.humidity)}%`,
       wind: `${Math.round(response.data.wind.speed)}km/h`,
     });
