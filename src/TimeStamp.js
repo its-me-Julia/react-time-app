@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function TimeStampFormat(props) {
-  console.log(props.timestamp);
   let days = [
     "Sunday",
     "Monday",
