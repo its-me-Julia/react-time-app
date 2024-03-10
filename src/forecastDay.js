@@ -11,7 +11,7 @@ export default function ForecastDay(props) {
 
   return (
     <div className="d-flex flex-column">
-      <div className="forecast-day">{day()}</div>
+      <div className="forecast-day fw-bold">{day()}</div>
       <img
         src={props.forecastData.condition.icon_url}
         alt={props.forecastData.condition.icon}
