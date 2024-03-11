@@ -20,16 +20,13 @@ export default function WeatherForecast(props) {
     return (
       <div className="forecast-maindiv">
         <div className="row">
-          {forecastData.map(function (dailyForecast, index) {
-            if (index < 5) {
-              return (
-                <div className="col" key={index}>
-                  {" "}
-                  <ForecastDay forecastData={dailyForecast} />
-                </div>
-              );
-            }
-          })}
+          <div className="d-flex flex-row justify-content-between">
+            <ForecastDay forecastData={forecastData[0]} />
+            <ForecastDay forecastData={forecastData[1]} />
+            <ForecastDay forecastData={forecastData[2]} />
+            <ForecastDay forecastData={forecastData[3]} />
+            <ForecastDay forecastData={forecastData[4]} />
+          </div>
         </div>
       </div>
     );
