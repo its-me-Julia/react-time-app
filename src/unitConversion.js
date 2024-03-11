@@ -6,7 +6,7 @@ export default function UnitConversion(props) {
     <div>
       <span className="temperature">{props.celsius}°</span>
       <span className="units">
-        <span className="fs-2 fw-semibold">C</span>
+        <span className="fs-5 fw-semibold">C</span>
       </span>
     </div>
   );
